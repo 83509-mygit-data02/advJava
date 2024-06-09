@@ -39,13 +39,17 @@ public class LoginServlet extends HttpServlet {
 			if(user != null && user.getPassword().equals(passwd)) {
 				Cookie c = new Cookie("uname", user.getFirstName());
 				c.setMaxAge(3600);
-				resp.addCookie(c);
+				resp.addCookie(c);// store cookie inside browser
 				
+				// session is server site method inside httpsession library
 				HttpSession session = req.getSession();
 				session.setAttribute("curuser", user);
 				
 				if(user.getRole().equals("voter")) {
+					
 					resp.sendRedirect("candlist");
+					
+			
 				}else {
 					// Admin login
 					resp.sendRedirect("result");

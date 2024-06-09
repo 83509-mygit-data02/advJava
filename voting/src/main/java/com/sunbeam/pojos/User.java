@@ -27,6 +27,11 @@ public class User {
 		this.role = role;
 	}
 
+	public User(String firstName2, String lastName2, String email2, String password2, java.util.Date birth2,
+			int status2, String role2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getId() {
 		return id;
 	}
