@@ -38,9 +38,11 @@
                 </td>
              </tr>
           </c:forEach>
+          
        </tbody>
      </table>
      <br/><br/>
-     <a href="logout.jsp">Sign Out</a>
+      ${dc.getMessage()} <br/>
+     <a href="signout.jsp">Sign Out</a>
 </body>
 </html>
